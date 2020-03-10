@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Plant_Order</string>
     <string name="title_activity_second">Second</string>
+    <string name="snake_plant_message">You ordered an ice cream sandwich.</string>
 </resources>
