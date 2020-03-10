@@ -10,7 +10,7 @@
     tools:showIn="@layout/activity_second">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/image"
         android:layout_width="180dp"
         android:layout_height="250dp"
         android:layout_marginStart="16dp"
@@ -30,7 +30,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/image"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:color/white" />
 
@@ -44,9 +44,9 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:onClick="snakeplant"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/image"
+        app:layout_constraintStart_toStartOf="@+id/image"
+        app:layout_constraintTop_toTopOf="@+id/image"
         app:srcCompat="@drawable/snakeplant" />
 
     <TextView
@@ -59,8 +59,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="Although the snake plant prefers bright light, it can survive lower light levels."
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/image"
+        app:layout_constraintStart_toStartOf="@+id/image"
         app:layout_constraintTop_toBottomOf="@+id/snakePlant" />
 
     <TextView
@@ -72,7 +72,7 @@
         android:gravity="center"
         android:text="$ 33"
         android:textSize="31sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
         app:layout_constraintEnd_toEndOf="@+id/textSnakePlant"
         app:layout_constraintStart_toStartOf="@+id/textSnakePlant"
         app:layout_constraintTop_toBottomOf="@+id/textSnakePlant" />
@@ -84,8 +84,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:text="-"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView" />
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintStart_toStartOf="@+id/image" />
 
     <Button
         android:id="@+id/plus1"
@@ -94,8 +94,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="+"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView" />
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="@+id/image" />
 
     <TextView
         android:id="@+id/quantity1"
@@ -107,7 +107,7 @@
         android:text="0"
         android:textColor="#E9E8E8"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
         app:layout_constraintEnd_toStartOf="@+id/plus1"
         app:layout_constraintStart_toEndOf="@+id/minus1"
         app:layout_constraintTop_toBottomOf="@+id/priceSnakePlant" />
@@ -197,7 +197,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/image"
         app:srcCompat="@android:color/white" />
 
     <ImageView
