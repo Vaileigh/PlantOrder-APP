@@ -58,49 +58,146 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Although the snake plant prefers bright light, it can survive lower light levels"
+        android:text="Although the snake plant prefers bright light, it can survive lower light levels."
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/snakePlant" />
 
     <TextView
-        android:id="@+id/price"
-        android:layout_width="wrap_content"
+        android:id="@+id/priceSnakePlant"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:layout_marginBottom="40dp"
-        android:text="Price"
+        android:gravity="center"
+        android:text="$ 33"
+        android:textSize="31sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        tools:layout_editor_absoluteX="87dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textSnakePlant"
+        app:layout_constraintStart_toStartOf="@+id/textSnakePlant"
+        app:layout_constraintTop_toBottomOf="@+id/textSnakePlant" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="46dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="8dp"
-        android:text="Button"
+        android:id="@+id/minus1"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="-"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="46dp"
-        android:layout_height="20dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="8dp"
-        android:text="Button"
+        android:id="@+id/plus1"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="+"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/quantity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/quantity1"
+        android:layout_width="45dp"
+        android:layout_height="25dp"
+        android:autoText="false"
+        android:background="#E9685B5B"
+        android:gravity="center"
         android:text="0"
+        android:textColor="#E9E8E8"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/price" />
+        app:layout_constraintEnd_toStartOf="@+id/plus1"
+        app:layout_constraintStart_toEndOf="@+id/minus1"
+        app:layout_constraintTop_toBottomOf="@+id/priceSnakePlant" />
+
+    <ImageView
+        android:id="@+id/Pothos"
+        android:layout_width="124dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:srcCompat="@drawable/pothos" />
+
+    <TextView
+        android:id="@+id/textPothos"
+        android:layout_width="167dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="This plant is super easy to grow, even indoors where lower light and dry air."
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/Pothos" />
+
+    <TextView
+        android:id="@+id/pricePothos"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="$ 15"
+        android:textSize="31sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/textPothos"
+        app:layout_constraintStart_toStartOf="@+id/textPothos"
+        app:layout_constraintTop_toBottomOf="@+id/textPothos" />
+
+    <Button
+        android:id="@+id/minus2"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/plus2"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/quantity2"
+        android:layout_width="45dp"
+        android:layout_height="25dp"
+        android:background="#E9685B5B"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/plus2"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toEndOf="@+id/minus2"
+        app:layout_constraintTop_toBottomOf="@+id/pricePothos" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="180dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="296dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:color/white" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
