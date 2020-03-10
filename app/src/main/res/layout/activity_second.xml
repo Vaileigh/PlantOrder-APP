@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="#A2A05F"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -28,12 +28,12 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_gravity="right|top"
+        android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="70dp"
-        app:backgroundTint="#8F000000"
-        app:srcCompat="@drawable/ic_shopping_cart"
-        android:layout_marginEnd="16dp" />
+        app:backgroundTint="#00A52626"
+        app:srcCompat="@drawable/ic_shopping_cart" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
