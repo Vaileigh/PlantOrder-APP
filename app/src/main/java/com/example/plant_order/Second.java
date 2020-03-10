@@ -1,5 +1,6 @@
 package com.example.plant_order;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -37,5 +38,10 @@ public class Second extends AppCompatActivity {
 
     public void snakeplant(View view) {
         displayToast(getString(R.string.snake_plant_message));
+    }
+
+    public void checkOut(View view) {
+        Intent thirdIntent = new Intent(Second.this, Third.class);
+        startActivity(thirdIntent);
     }
 }

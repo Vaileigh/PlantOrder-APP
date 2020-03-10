@@ -2,4 +2,7 @@
     <string name="app_name">Plant_Order</string>
     <string name="title_activity_second">Second</string>
     <string name="snake_plant_message">You ordered an ice cream sandwich.</string>
+
+<!--    Second activity-->
+    <string name="item_selected">[ 0 Item Selected ]</string>
 </resources>
