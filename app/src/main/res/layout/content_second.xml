@@ -10,12 +10,12 @@
     tools:showIn="@layout/activity_second">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/image"
         android:layout_width="180dp"
         android:layout_height="250dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:color/white" />
@@ -26,11 +26,11 @@
         android:layout_height="250dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/image"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:color/white" />
 
@@ -44,9 +44,9 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:onClick="snakeplant"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/image"
+        app:layout_constraintStart_toStartOf="@+id/image"
+        app:layout_constraintTop_toTopOf="@+id/image"
         app:srcCompat="@drawable/snakeplant" />
 
     <TextView
@@ -59,8 +59,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="Although the snake plant prefers bright light, it can survive lower light levels."
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/image"
+        app:layout_constraintStart_toStartOf="@+id/image"
         app:layout_constraintTop_toBottomOf="@+id/snakePlant" />
 
     <TextView
@@ -72,7 +72,7 @@
         android:gravity="center"
         android:text="$ 33"
         android:textSize="31sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
         app:layout_constraintEnd_toEndOf="@+id/textSnakePlant"
         app:layout_constraintStart_toStartOf="@+id/textSnakePlant"
         app:layout_constraintTop_toBottomOf="@+id/textSnakePlant" />
@@ -84,8 +84,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:text="-"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView" />
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintStart_toStartOf="@+id/image" />
 
     <Button
         android:id="@+id/plus1"
@@ -95,8 +95,8 @@
         android:layout_marginRight="8dp"
         android:text="+"
         android:onClick="plus1Add"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView" />
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="@+id/image" />
 
     <TextView
         android:id="@+id/quantity1"
@@ -108,7 +108,7 @@
         android:text="0"
         android:textColor="#E9E8E8"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
         app:layout_constraintEnd_toStartOf="@+id/plus1"
         app:layout_constraintStart_toEndOf="@+id/minus1"
         app:layout_constraintTop_toBottomOf="@+id/priceSnakePlant" />
@@ -196,9 +196,9 @@
         android:layout_height="250dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="296dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image"
         app:srcCompat="@android:color/white" />
 
     <ImageView
@@ -214,6 +214,157 @@
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:srcCompat="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/dracaena"
+        android:layout_width="124dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:srcCompat="@drawable/dracaena" />
+
+    <TextView
+        android:id="@+id/textDracaena"
+        android:layout_width="167dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="It can deal with indoor temperature and season changes better."
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/dracaena" />
+
+    <TextView
+        android:id="@+id/priceDracaena"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="$ 25"
+        android:textSize="31sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/textDracaena"
+        app:layout_constraintStart_toStartOf="@+id/textDracaena"
+        app:layout_constraintTop_toBottomOf="@+id/textDracaena" />
+
+    <Button
+        android:id="@+id/minus3"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3" />
+
+    <Button
+        android:id="@+id/plus3"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/quantity3"
+        android:layout_width="45dp"
+        android:layout_height="25dp"
+        android:background="#E9685B5B"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toStartOf="@+id/plus3"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toEndOf="@+id/minus3"
+        app:layout_constraintTop_toBottomOf="@+id/priceDracaena" />
+
+    <ImageView
+        android:id="@+id/philodendronGreen"
+        android:layout_width="124dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:srcCompat="@drawable/philodendrongreen" />
+
+    <TextView
+        android:id="@+id/textPhilodendronGreen"
+        android:layout_width="167dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="incredibly easy to prune and propagate, if you prefer compact shape"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/philodendronGreen" />
+
+    <TextView
+        android:id="@+id/pricePhilodendronGreen"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="$ 39"
+        android:textSize="31sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/textPhilodendronGreen"
+        app:layout_constraintStart_toStartOf="@+id/textPhilodendronGreen"
+        app:layout_constraintTop_toBottomOf="@+id/textPhilodendronGreen" />
+
+    <Button
+        android:id="@+id/minus4"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/quantity4"
+        android:layout_width="45dp"
+        android:layout_height="25dp"
+        android:background="#E9685B5B"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toStartOf="@+id/button9"
+        app:layout_constraintStart_toEndOf="@+id/minus4"
+        app:layout_constraintTop_toBottomOf="@+id/pricePhilodendronGreen" />
 
     <ImageView
         android:id="@+id/bottom1"
@@ -232,24 +383,26 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom|right"
+        android:layout_marginStart="300dp"
+        android:layout_marginLeft="300dp"
         android:onClick="checkOut"
         android:text="Check Out"
         android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView_itemSelected"
         android:layout_width="160dp"
         android:layout_height="24dp"
         android:layout_gravity="bottom"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="248dp"
+        android:layout_marginRight="248dp"
+        android:layout_marginBottom="12dp"
         android:text="@string/item_selected"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintStart_toStartOf="@+id/imageView4" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/textView_subtotal"
@@ -257,23 +410,20 @@
         android:layout_height="wrap_content"
         android:text="subtotal:"
         app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintHorizontal_bias="0.627"
+        app:layout_constraintHorizontal_bias="0.688"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="619dp" />
+        tools:layout_editor_absoluteY="620dp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="12dp"
         android:text="RM  0.00"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toEndOf="@+id/textView_subtotal"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="1.0" />
-
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView_subtotal" />
 </androidx.constraintlayout.widget.ConstraintLayout>
