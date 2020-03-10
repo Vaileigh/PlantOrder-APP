@@ -51,10 +51,22 @@ public class Second extends AppCompatActivity {
         startActivity(thirdIntent);
     }
 
-    public void plus1Add(View view) {
+    public void plus1Inc(View view) {
         ++intQty1;
         ++totalQty;
+        updateInt();
+    }
+
+    public void minus1Dec(View view) {
+        if(intQty1 > 0){
+            --intQty1;
+            --totalQty;
+            updateInt();
+        }
+    }
+
+    public void updateInt(){
         qty1.setText(Integer.toString(intQty1));
-        totalSelected.setText("[ "+Integer.toString(totalQty)+" Item Selected]");
+        totalSelected.setText("[ "+Integer.toString(totalQty)+" Item Selected ]");
     }
 }
