@@ -35,31 +35,4 @@
         app:srcCompat="@drawable/ic_shopping_cart"
         android:layout_marginEnd="16dp" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_gravity="bottom"
-        android:background="?attr/colorPrimary"
-        app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="121dp"
-        android:layout_height="36dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:onClick="checkOut"
-        android:text="Check Out"
-        android:textSize="10sp"
-        android:layout_gravity="bottom|right" />
-
-    <TextView
-        android:id="@+id/textView_itemSelected"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:text="@string/item_selected" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -10,15 +10,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Second extends AppCompatActivity {
-
+    private int totalQty = 0;
+    private int intQty1 = 0;
+    private TextView qty1;
+    private TextView totalSelected;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        qty1 = (TextView) findViewById(R.id.quantity1);
+        totalSelected = (TextView) findViewById(R.id.textView_itemSelected);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -43,5 +49,12 @@ public class Second extends AppCompatActivity {
     public void checkOut(View view) {
         Intent thirdIntent = new Intent(Second.this, Third.class);
         startActivity(thirdIntent);
+    }
+
+    public void plus1Add(View view) {
+        ++intQty1;
+        ++totalQty;
+        qty1.setText(Integer.toString(intQty1));
+        totalSelected.setText("[ "+Integer.toString(totalQty)+" Item Selected]");
     }
 }
