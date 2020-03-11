@@ -14,6 +14,7 @@ import android.widget.Toast;
 public class Third extends AppCompatActivity implements
     AdapterView.OnItemSelectedListener {
 
+    private double shipFees;
     public void displayToast(String message) {
         Toast.makeText(getApplicationContext(), message,
                 Toast.LENGTH_SHORT).show();
@@ -22,7 +23,6 @@ public class Third extends AppCompatActivity implements
        // private Intent secondIntent = getIntent();
      //   private String string_subtotal = secondIntent.getStringExtra(Second.EXTRA_MESSAGE);
       //  private int int_subtotal = Integer.parseInt(string_subtotal);
-
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -54,12 +54,27 @@ public class Third extends AppCompatActivity implements
         subtotal = (TextView) findViewById(R.id.textView_priceProd);
         subtotal.setText("$ "+Integer.toString(price)+".00");
     }
+    private void shippingSubtotal(String shipMethod){
+        String snippingChoices[]= getResources().getStringArray(R.array.labels_array);
+        if(shipMethod.equals(snippingChoices[0]))
+            shipFees =3.65;
+        else if(shipMethod.equals(snippingChoices[1]))
+            shipFees =5.53;
+        else if (shipMethod.equals(snippingChoices[2]))
+            shipFees =2.46;
+        TextView shipTotal;
+        shipTotal = (TextView) findViewById(R.id.textView_priceProd2);
+//        Toast.makeText(this, Double.toString(shipFees),
+//                Toast.LENGTH_SHORT).show();
+        shipTotal.setText("$ "+Double.toString(shipFees));
+    }
 
     @Override
         public void onItemSelected(AdapterView<?> adapterView, View view, int
                 i, long l) {
             String spinnerLabel = adapterView.getItemAtPosition(i).toString();
-           // displayToast(spinnerLabel);
+            shippingSubtotal(spinnerLabel);
+            displayToast(spinnerLabel);
         }
 
         @Override

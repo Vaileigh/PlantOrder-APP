@@ -10,7 +10,7 @@
     <string name="price_subtotal">$ 0.00</string>
     <string-array name="labels_array">
         <item>DHL</item>
-        <item>J and T</item>
+        <item>FedEx</item>
         <item>PosLaju</item>
     </string-array>
 
