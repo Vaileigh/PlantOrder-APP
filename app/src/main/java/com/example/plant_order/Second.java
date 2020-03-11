@@ -57,9 +57,7 @@ public class Second extends AppCompatActivity {
                 Toast.LENGTH_SHORT).show();
     }
 
-    public void snakeplant(View view) {
-        displayToast(getString(R.string.snake_plant_message));
-    }
+
 
     public void checkOut(View view) {
         Intent thirdIntent = new Intent(Second.this, Third.class);
@@ -182,5 +180,20 @@ public class Second extends AppCompatActivity {
 
         totalSelected.setText("[ "+Integer.toString(totalQty)+" Item Selected ]");
         subtotalPrice.setText("RM "+Integer.toString(subtotal)+".00 ");
+    }
+    public void snakeplant(View view) {
+        displayToast(getString(R.string.snake_plant_message));
+    }
+
+    public void pothos(View view) {
+        displayToast(getString(R.string.pothos_message));
+    }
+
+    public void dracaena(View view) {
+        displayToast(getString(R.string.dracaena_message));
+    }
+
+    public void philodendrongreen(View view) {
+        displayToast(getString(R.string.philodendron_green_message));
     }
 }

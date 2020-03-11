@@ -1,9 +1,14 @@
 <resources>
     <string name="app_name">Plant_Order</string>
+    <!--    Second activity-->
     <string name="title_activity_second">Second</string>
-    <string name="snake_plant_message">You ordered an ice cream sandwich.</string>
-
-<!--    Second activity-->
+    <string name="snake_plant_message">This is snake plant.</string>
+    <string name="pothos_message">This is pothos plant.</string>
+    <string name="dracaena_message">This is dracaena plant.</string>
+    <string name="philodendron_green_message">This is philodendron green plant.</string>
     <string name="item_selected">[ 0 Item Selected ]</string>
-    <string name="price_subtotal">RM 0.00</string>
+    <string name="price_subtotal">$ 0.00</string>
+
+
+
 </resources>
