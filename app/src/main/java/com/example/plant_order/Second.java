@@ -179,7 +179,7 @@ public class Second extends AppCompatActivity {
             field_id.setText(Integer.toString(intQty4));
 
         totalSelected.setText("[ "+Integer.toString(totalQty)+" Item Selected ]");
-        subtotalPrice.setText("RM "+Integer.toString(subtotal)+".00 ");
+        subtotalPrice.setText("$ "+Integer.toString(subtotal)+".00 ");
     }
     public void snakeplant(View view) {
         displayToast(getString(R.string.snake_plant_message));
