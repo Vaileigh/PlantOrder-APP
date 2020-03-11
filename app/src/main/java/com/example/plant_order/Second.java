@@ -16,14 +16,18 @@ import android.widget.Toast;
 public class Second extends AppCompatActivity {
     private int totalQty = 0;
     private int intQty1 = 0;
-    private TextView qty1;
+    private int intQty2 = 0;
+    private int intQty3 = 0;
+    private int intQty4 = 0;
+    private String show_id;
+//    private TextView qty1;
     private TextView totalSelected;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        qty1 = (TextView) findViewById(R.id.quantity1);
+//        qty1 = (TextView) findViewById(R.id.quantity1);
         totalSelected = (TextView) findViewById(R.id.textView_itemSelected);
         setSupportActionBar(toolbar);
 
@@ -50,23 +54,108 @@ public class Second extends AppCompatActivity {
         Intent thirdIntent = new Intent(Second.this, Third.class);
         startActivity(thirdIntent);
     }
-
-    public void plus1Inc(View view) {
-        ++intQty1;
-        ++totalQty;
-        updateInt();
-    }
-
-    public void minus1Dec(View view) {
-        if(intQty1 > 0){
-            --intQty1;
-            --totalQty;
-            updateInt();
+    public void validateId(View view){
+        switch(view.getId()) {
+            case R.id.plus1:
+                show_id = "quantity1";
+                plusInc();
+                updateInt(show_id);
+                break;
+            case R.id.minus1:
+                show_id = "quantity1";
+                minusDec();
+                updateInt(show_id);
+                break;
+            case R.id.plus2:
+                show_id = "quantity2";
+                plusInc();
+                updateInt(show_id);
+                break;
+            case R.id.minus2:
+                show_id = "quantity2";
+                minusDec();
+                updateInt(show_id);
+                break;
+            case R.id.plus3:
+                show_id = "quantity3";
+                plusInc();
+                updateInt(show_id);
+                break;
+            case R.id.minus3:
+                show_id = "quantity3";
+                minusDec();
+                updateInt(show_id);
+                break;
+            case R.id.plus4:
+                show_id = "quantity4";
+                plusInc();
+                updateInt(show_id);
+                break;
+            case R.id.minus4:
+                show_id = "quantity4";
+                minusDec();
+                updateInt(show_id);
+                break;
         }
     }
+    public void plusInc() {
+        if(show_id == "quantity1")
+            ++intQty1;
+        else if (show_id == "quantity2")
+            ++intQty2;
+        else if (show_id == "quantity3")
+            ++intQty3;
+        else if (show_id == "quantity4")
+            ++intQty4;
+        ++totalQty;
+    }
 
-    public void updateInt(){
-        qty1.setText(Integer.toString(intQty1));
+    public void minusDec() {
+        if(show_id == "quantity1"){
+            if(intQty1 > 0){
+                --intQty1;
+                --totalQty;
+            }
+        }
+        else if (show_id == "quantity2"){
+            if(intQty2 > 0){
+                --intQty2;
+                --totalQty;
+            }
+        }
+
+        else if (show_id == "quantity3"){
+            if(intQty3 > 0){
+                --intQty3;
+                --totalQty;
+            }
+        }
+
+        else if (show_id == "quantity4"){
+            if(intQty4 > 0){
+                --intQty4;
+                --totalQty;
+            }
+        }
+
+    }
+
+    public void updateInt(String show_id){
+        int resID = getResources().getIdentifier(show_id,"id",getPackageName());
+        TextView field_id;
+        field_id = (TextView) findViewById(resID);
+
+        if(show_id == "quantity1")
+            field_id.setText(Integer.toString(intQty1));
+        else if (show_id == "quantity2")
+            field_id.setText(Integer.toString(intQty2));
+
+        else if (show_id == "quantity3")
+            field_id.setText(Integer.toString(intQty3));
+
+        else if (show_id == "quantity4")
+            field_id.setText(Integer.toString(intQty4));
+
         totalSelected.setText("[ "+Integer.toString(totalQty)+" Item Selected ]");
     }
 }
