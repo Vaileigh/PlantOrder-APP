@@ -9,9 +9,9 @@
     <string name="item_selected">[ 0 Item Selected ]</string>
     <string name="price_subtotal">$ 0.00</string>
     <string-array name="labels_array">
-        <item>+60</item>
-        <item>+65</item>
-        <item>+66</item>
+        <item>DHL</item>
+        <item>J and T</item>
+        <item>PosLaju</item>
     </string-array>
 
 
