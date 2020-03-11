@@ -50,6 +50,11 @@ public class Second extends AppCompatActivity {
 
 
     public void checkOut(View view) {
+//        if(intQty1>0){
+//            products[0]=Integer.toString(intQty1);
+//        }
+//        else
+//            products[0]= NULL;
         Intent thirdIntent = new Intent(Second.this, Third.class);
         String subtotal_String = subtotalPrice.getText().toString();
         thirdIntent.putExtra(EXTRA_MESSAGE, subtotal_String);
@@ -125,20 +130,23 @@ public class Second extends AppCompatActivity {
         if(show_id == "quantity1" && leftQty1>0){
             ++intQty1;
             --leftQty1;
+            ++totalQty;
         }
         else if (show_id == "quantity2"&& leftQty2>0) {
             ++intQty2;
             --leftQty2;
+            ++totalQty;
         }
         else if (show_id == "quantity3"&& leftQty3>0) {
             ++intQty3;
             --leftQty3;
+            ++totalQty;
         }
         else if (show_id == "quantity4"&& leftQty4>0) {
             ++intQty4;
             --leftQty4;
+            ++totalQty;
         }
-        ++totalQty;
     }
 
     public void minusDec() {
