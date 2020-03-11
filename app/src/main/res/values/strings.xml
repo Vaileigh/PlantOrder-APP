@@ -8,7 +8,11 @@
     <string name="philodendron_green_message">This is philodendron green plant.</string>
     <string name="item_selected">[ 0 Item Selected ]</string>
     <string name="price_subtotal">$ 0.00</string>
-
+    <string-array name="labels_array">
+        <item>+60</item>
+        <item>+65</item>
+        <item>+66</item>
+    </string-array>
 
 
 </resources>
