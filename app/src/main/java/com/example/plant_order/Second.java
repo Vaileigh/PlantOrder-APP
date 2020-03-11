@@ -24,7 +24,7 @@ public class Second extends AppCompatActivity {
     private int priceQty2 = 15;
     private int priceQty3 = 25;
     private int priceQty4 = 39;
-    private int subtotal;
+    private int subtotal = 0;
 //    private String
     private String show_id;
 //    private TextView
