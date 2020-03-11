@@ -18,17 +18,13 @@ public class Second extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.plant_order.extra.MESSAGE";
 //    private int
     private int totalQty = 0;
-    private int intQty1 = 0;
-    private int intQty2 = 0;
-    private int intQty3 = 0;
-    private int intQty4 = 0;
-    private int priceQty1 = 33;
-    private int priceQty2 = 15;
-    private int priceQty3 = 25;
-    private int priceQty4 = 39;
+    private int intQty1 = 0, intQty2 = 0, intQty3 = 0, intQty4=0;
+    private int priceQty1 = 33, priceQty2 = 15, priceQty3= 25, priceQty4=39;
+    private int leftQty1 = 33, leftQty2 = 15, leftQty3 = 25, leftQty4 = 39;
     private int subtotal = 0;
 //    private String
     private String show_id;
+    private String show_leftId;
 //    private TextView
     private TextView totalSelected;
     private TextView subtotalPrice;
@@ -61,51 +57,59 @@ public class Second extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.plus1:
                 show_id = "quantity1";
+                show_leftId ="qtyLeft1";
                 plusInc();
                 calculateSubtotal();
-                updateInt(show_id);
+                updateInt();
                 break;
             case R.id.minus1:
                 show_id = "quantity1";
+                show_leftId ="qtyLeft1";
                 minusDec();
                 calculateSubtotal();
-                updateInt(show_id);
+                updateInt();
                 break;
             case R.id.plus2:
                 show_id = "quantity2";
+                show_leftId ="qtyLeft2";
                 plusInc();
                 calculateSubtotal();
-                updateInt(show_id);
+                updateInt();
                 break;
             case R.id.minus2:
                 show_id = "quantity2";
+                show_leftId ="qtyLeft2";
                 minusDec();
                 calculateSubtotal();
-                updateInt(show_id);
+                updateInt();
                 break;
             case R.id.plus3:
                 show_id = "quantity3";
+                show_leftId ="qtyLeft3";
                 plusInc();
                 calculateSubtotal();
-                updateInt(show_id);
+                updateInt();
                 break;
             case R.id.minus3:
                 show_id = "quantity3";
+                show_leftId ="qtyLeft3";
                 minusDec();
                 calculateSubtotal();
-                updateInt(show_id);
+                updateInt();
                 break;
             case R.id.plus4:
                 show_id = "quantity4";
+                show_leftId ="qtyLeft4";
                 plusInc();
                 calculateSubtotal();
-                updateInt(show_id);
+                updateInt();
                 break;
             case R.id.minus4:
                 show_id = "quantity4";
+                show_leftId ="qtyLeft4";
                 minusDec();
                 calculateSubtotal();
-                updateInt(show_id);
+                updateInt();
                 break;
         }
     }
@@ -113,14 +117,22 @@ public class Second extends AppCompatActivity {
         subtotal = priceQty1*intQty1+priceQty2*intQty2+priceQty3*intQty3+priceQty4*intQty4;
     }
     public void plusInc() {
-        if(show_id == "quantity1")
+        if(show_id == "quantity1" && leftQty1>0){
             ++intQty1;
-        else if (show_id == "quantity2")
+            --leftQty1;
+        }
+        else if (show_id == "quantity2"&& leftQty2>0) {
             ++intQty2;
-        else if (show_id == "quantity3")
+            --leftQty2;
+        }
+        else if (show_id == "quantity3"&& leftQty3>0) {
             ++intQty3;
-        else if (show_id == "quantity4")
+            --leftQty3;
+        }
+        else if (show_id == "quantity4"&& leftQty4>0) {
             ++intQty4;
+            --leftQty4;
+        }
         ++totalQty;
     }
 
@@ -129,12 +141,14 @@ public class Second extends AppCompatActivity {
             if(intQty1 > 0){
                 --intQty1;
                 --totalQty;
+                ++leftQty1;
             }
         }
         else if (show_id == "quantity2"){
             if(intQty2 > 0){
                 --intQty2;
                 --totalQty;
+                ++leftQty2;
             }
         }
 
@@ -142,6 +156,7 @@ public class Second extends AppCompatActivity {
             if(intQty3 > 0){
                 --intQty3;
                 --totalQty;
+                ++leftQty3;
             }
         }
 
@@ -149,26 +164,35 @@ public class Second extends AppCompatActivity {
             if(intQty4 > 0){
                 --intQty4;
                 --totalQty;
+                ++leftQty4;
             }
         }
 
     }
 
-    public void updateInt(String show_id){
+    public void updateInt(){
         int resID = getResources().getIdentifier(show_id,"id",getPackageName());
-        TextView field_id;
+        int resLeftID = getResources().getIdentifier(show_leftId,"id",getPackageName());
+        TextView field_id, field_leftId;
         field_id = (TextView) findViewById(resID);
+        field_leftId = (TextView) findViewById(resLeftID);
 
-        if(show_id == "quantity1")
+        if(show_id == "quantity1") {
             field_id.setText(Integer.toString(intQty1));
-        else if (show_id == "quantity2")
+            field_leftId.setText(Integer.toString(leftQty1)+" Left");
+        }
+        else if (show_id == "quantity2") {
             field_id.setText(Integer.toString(intQty2));
-
-        else if (show_id == "quantity3")
+            field_leftId.setText(Integer.toString(leftQty2)+" Left");
+        }
+        else if (show_id == "quantity3") {
             field_id.setText(Integer.toString(intQty3));
-
-        else if (show_id == "quantity4")
+            field_leftId.setText(Integer.toString(leftQty3)+" Left");
+        }
+        else if (show_id == "quantity4") {
             field_id.setText(Integer.toString(intQty4));
+            field_leftId.setText(Integer.toString(leftQty4)+" Left");
+        }
 
         totalSelected.setText("[ "+Integer.toString(totalQty)+" Item Selected ]");
         subtotalPrice.setText("$ "+Integer.toString(subtotal)+".00 ");

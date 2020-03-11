@@ -12,7 +12,7 @@
     <ImageView
         android:id="@+id/image"
         android:layout_width="180dp"
-        android:layout_height="250dp"
+        android:layout_height="290dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
@@ -23,7 +23,7 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="180dp"
-        android:layout_height="250dp"
+        android:layout_height="290dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
@@ -64,42 +64,6 @@
         app:layout_constraintTop_toBottomOf="@+id/snakePlant" />
 
     <TextView
-        android:id="@+id/priceSnakePlant"
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="40dp"
-        android:gravity="center"
-        android:text="$ 33"
-        android:textSize="31sp"
-        app:layout_constraintBottom_toBottomOf="@+id/image"
-        app:layout_constraintEnd_toEndOf="@+id/textSnakePlant"
-        app:layout_constraintStart_toStartOf="@+id/textSnakePlant"
-        app:layout_constraintTop_toBottomOf="@+id/textSnakePlant" />
-
-    <Button
-        android:id="@+id/minus1"
-        android:layout_width="35dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:onClick="validateId"
-        android:text="-"
-        app:layout_constraintBottom_toBottomOf="@+id/image"
-        app:layout_constraintStart_toStartOf="@+id/image" />
-
-    <Button
-        android:id="@+id/plus1"
-        android:layout_width="35dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="+"
-        android:onClick="validateId"
-        app:layout_constraintBottom_toBottomOf="@+id/image"
-        app:layout_constraintEnd_toEndOf="@+id/image" />
-
-    <TextView
         android:id="@+id/quantity1"
         android:layout_width="45dp"
         android:layout_height="25dp"
@@ -110,8 +74,26 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/image"
         app:layout_constraintEnd_toStartOf="@+id/plus1"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toEndOf="@+id/minus1"
-        app:layout_constraintTop_toBottomOf="@+id/priceSnakePlant" />
+        app:layout_constraintTop_toBottomOf="@+id/priceSnakePlant"
+        app:layout_constraintVertical_bias="0.23" />
+
+    <TextView
+        android:id="@+id/quantity2"
+        android:layout_width="45dp"
+        android:layout_height="25dp"
+        android:background="#E9685B5B"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/plus2"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toEndOf="@+id/minus2"
+        app:layout_constraintTop_toBottomOf="@+id/pricePothos"
+        app:layout_constraintVertical_bias="0.23" />
 
     <ImageView
         android:id="@+id/Pothos"
@@ -142,61 +124,10 @@
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/Pothos" />
 
-    <TextView
-        android:id="@+id/pricePothos"
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="40dp"
-        android:gravity="center"
-        android:text="$ 15"
-        android:textSize="31sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="@+id/textPothos"
-        app:layout_constraintStart_toStartOf="@+id/textPothos"
-        app:layout_constraintTop_toBottomOf="@+id/textPothos" />
-
-    <Button
-        android:id="@+id/minus2"
-        android:layout_width="35dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:onClick="validateId"
-        android:text="-"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2" />
-
-    <Button
-        android:id="@+id/plus2"
-        android:layout_width="35dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:onClick="validateId"
-        android:text="+"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/quantity2"
-        android:layout_width="45dp"
-        android:layout_height="25dp"
-        android:background="#E9685B5B"
-        android:gravity="center"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toStartOf="@+id/plus2"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toEndOf="@+id/minus2"
-        app:layout_constraintTop_toBottomOf="@+id/pricePothos" />
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="180dp"
-        android:layout_height="250dp"
+        android:layout_height="290dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
@@ -207,7 +138,7 @@
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="180dp"
-        android:layout_height="250dp"
+        android:layout_height="290dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
@@ -248,6 +179,38 @@
         app:layout_constraintTop_toBottomOf="@+id/dracaena" />
 
     <TextView
+        android:id="@+id/pricePhilodendronGreen"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="$ 39"
+        android:textSize="31sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/textPhilodendronGreen"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/textPhilodendronGreen"
+        app:layout_constraintTop_toBottomOf="@+id/textPhilodendronGreen"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/priceSnakePlant"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="$ 33"
+        android:textSize="31sp"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="@+id/textSnakePlant"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="@+id/textSnakePlant"
+        app:layout_constraintTop_toBottomOf="@+id/textSnakePlant"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
         android:id="@+id/priceDracaena"
         android:layout_width="90dp"
         android:layout_height="wrap_content"
@@ -258,30 +221,133 @@
         android:textSize="31sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="@+id/textDracaena"
+        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="@+id/textDracaena"
-        app:layout_constraintTop_toBottomOf="@+id/textDracaena" />
+        app:layout_constraintTop_toBottomOf="@+id/textDracaena"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/pricePothos"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="$ 15"
+        android:textSize="31sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/textPothos"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="@+id/textPothos"
+        app:layout_constraintTop_toBottomOf="@+id/textPothos"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/quantity4"
+        android:layout_width="45dp"
+        android:layout_height="25dp"
+        android:background="#E9685B5B"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toStartOf="@+id/plus4"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toEndOf="@+id/minus4"
+        app:layout_constraintTop_toBottomOf="@+id/pricePhilodendronGreen"
+        app:layout_constraintVertical_bias="0.23" />
+
+    <Button
+        android:id="@+id/plus3"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="validateId"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3" />
+
+    <Button
+        android:id="@+id/minus1"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="validateId"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toStartOf="@+id/priceSnakePlant"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/image" />
+
+    <Button
+        android:id="@+id/plus1"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="validateId"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="@+id/image" />
+
+    <Button
+        android:id="@+id/minus2"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="validateId"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/plus2"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="validateId"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2" />
 
     <Button
         android:id="@+id/minus3"
         android:layout_width="35dp"
         android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="28dp"
         android:onClick="validateId"
         android:text="-"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="@+id/imageView3" />
 
     <Button
-        android:id="@+id/plus3"
+        android:id="@+id/minus4"
         android:layout_width="35dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="validateId"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4" />
+
+    <Button
+        android:id="@+id/plus4"
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="28dp"
         android:onClick="validateId"
         android:text="+"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4" />
 
     <TextView
         android:id="@+id/quantity3"
@@ -293,9 +359,10 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toStartOf="@+id/plus3"
-        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toEndOf="@+id/minus3"
-        app:layout_constraintTop_toBottomOf="@+id/priceDracaena" />
+        app:layout_constraintTop_toBottomOf="@+id/priceDracaena"
+        app:layout_constraintVertical_bias="0.23" />
 
     <ImageView
         android:id="@+id/philodendronGreen"
@@ -326,55 +393,6 @@
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/philodendronGreen" />
 
-    <TextView
-        android:id="@+id/pricePhilodendronGreen"
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="40dp"
-        android:gravity="center"
-        android:text="$ 39"
-        android:textSize="31sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/textPhilodendronGreen"
-        app:layout_constraintStart_toStartOf="@+id/textPhilodendronGreen"
-        app:layout_constraintTop_toBottomOf="@+id/textPhilodendronGreen" />
-
-    <Button
-        android:id="@+id/minus4"
-        android:layout_width="35dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:onClick="validateId"
-        android:text="-"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4" />
-
-    <Button
-        android:id="@+id/plus4"
-        android:layout_width="35dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:onClick="validateId"
-        android:text="+"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4" />
-
-    <TextView
-        android:id="@+id/quantity4"
-        android:layout_width="45dp"
-        android:layout_height="25dp"
-        android:background="#E9685B5B"
-        android:gravity="center"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toStartOf="@+id/plus4"
-        app:layout_constraintStart_toEndOf="@+id/minus4"
-        app:layout_constraintTop_toBottomOf="@+id/pricePhilodendronGreen" />
-
     <ImageView
         android:id="@+id/bottom1"
         android:layout_width="match_parent"
@@ -393,12 +411,12 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom|right"
-        android:layout_marginStart="300dp"
-        android:layout_marginLeft="300dp"
         android:onClick="checkOut"
         android:text="Check Out"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.943"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -406,13 +424,13 @@
         android:layout_width="160dp"
         android:layout_height="24dp"
         android:layout_gravity="bottom"
-        android:layout_marginEnd="248dp"
-        android:layout_marginRight="248dp"
         android:layout_marginBottom="12dp"
         android:text="@string/item_selected"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/button_checkOut"
+        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView_subtotal"
@@ -422,7 +440,7 @@
         android:text="subtotal:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_checkOut"
-        app:layout_constraintHorizontal_bias="0.624"
+        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -439,4 +457,48 @@
         app:layout_constraintStart_toEndOf="@+id/textView_itemSelected"
         app:layout_constraintTop_toTopOf="@+id/bottom1"
         app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/qtyLeft1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20 Left"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="@+id/quantity1"
+        app:layout_constraintStart_toStartOf="@+id/quantity1"
+        app:layout_constraintTop_toBottomOf="@+id/quantity1" />
+
+    <TextView
+        android:id="@+id/qtyLeft2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20 Left"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/quantity2"
+        app:layout_constraintStart_toStartOf="@+id/quantity2"
+        app:layout_constraintTop_toBottomOf="@+id/quantity2" />
+
+    <TextView
+        android:id="@+id/qtyLeft3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="6dp"
+        android:text="20 Left"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/quantity3"
+        app:layout_constraintStart_toStartOf="@+id/quantity3"
+        app:layout_constraintTop_toBottomOf="@+id/quantity3" />
+
+    <TextView
+        android:id="@+id/qtyLeft4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="6dp"
+        android:text="20 Left"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/quantity4"
+        app:layout_constraintStart_toStartOf="@+id/quantity4"
+        app:layout_constraintTop_toBottomOf="@+id/quantity4" />
 </androidx.constraintlayout.widget.ConstraintLayout>
