@@ -384,7 +384,7 @@
         app:srcCompat="@color/colorBottom" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button_checkOut"
         android:layout_width="108dp"
         android:layout_height="56dp"
         android:layout_alignParentEnd="true"
@@ -419,7 +419,7 @@
         android:layout_marginBottom="36dp"
         android:text="subtotal:"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/button_checkOut"
         app:layout_constraintHorizontal_bias="0.624"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -432,7 +432,7 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/button_checkOut"
         app:layout_constraintHorizontal_bias="0.761"
         app:layout_constraintStart_toEndOf="@+id/textView_itemSelected"
         app:layout_constraintTop_toTopOf="@+id/bottom1"
