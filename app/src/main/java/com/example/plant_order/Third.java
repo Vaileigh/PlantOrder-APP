@@ -15,6 +15,7 @@ public class Third extends AppCompatActivity implements
     AdapterView.OnItemSelectedListener {
 
     private double shipFees;
+    private int product;
     public void displayToast(String message) {
         Toast.makeText(getApplicationContext(), message,
                 Toast.LENGTH_SHORT).show();
@@ -30,7 +31,8 @@ public class Third extends AppCompatActivity implements
             Intent secondIntent = getIntent();
             String string_subtotal = secondIntent.getStringExtra(Second.EXTRA_MESSAGE);
             int[] products = secondIntent.getIntArrayExtra(Second.EXTRA_PRODUCT);
-            productSubtotal(products[4]);
+            product = products[4];
+            productSubtotal(product);
 //            String int_subtotal = Integer.toString(products[4]);
 //            Toast.makeText(this, int_subtotal,
 //                Toast.LENGTH_SHORT).show();
@@ -69,11 +71,20 @@ public class Third extends AppCompatActivity implements
         shipTotal.setText("$ "+Double.toString(shipFees));
     }
 
+    private void totalPayment(){
+        double prodSubtotal = product;
+        double sum = product + shipFees;
+        TextView paymentView;
+        paymentView = (TextView) findViewById(R.id.total);
+        paymentView.setText ("$ "+Double.toString(sum));
+    }
+
     @Override
         public void onItemSelected(AdapterView<?> adapterView, View view, int
                 i, long l) {
             String spinnerLabel = adapterView.getItemAtPosition(i).toString();
             shippingSubtotal(spinnerLabel);
+            totalPayment();
             displayToast(spinnerLabel);
         }
 
