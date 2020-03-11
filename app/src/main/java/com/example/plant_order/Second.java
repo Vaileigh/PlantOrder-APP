@@ -194,9 +194,9 @@ public class Second extends AppCompatActivity {
         } else if (show_id == "quantity4") {
             field_id.setText(Integer.toString(intQty4));
             field_leftId.setText(Integer.toString(leftQty4) + " Left");
-            totalSelected.setText("[ " + Integer.toString(totalQty) + " Item Selected ]");
-            subtotalPrice.setText("$ " + Integer.toString(subtotal) + ".00 ");
         }
+        totalSelected.setText("[ " + Integer.toString(totalQty) + " Item Selected ]");
+        subtotalPrice.setText("$ " + Integer.toString(subtotal) + ".00 ");
     }
     public void snakeplant(View view) {
         displayToast(getString(R.string.snake_plant_message));
