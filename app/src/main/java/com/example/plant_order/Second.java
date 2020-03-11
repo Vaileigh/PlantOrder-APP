@@ -23,7 +23,7 @@ public class Second extends AppCompatActivity {
     private int priceQty1 = 33, priceQty2 = 15, priceQty3= 25, priceQty4=39;
     private int leftQty1 = 33, leftQty2 = 15, leftQty3 = 25, leftQty4 = 39;
     private int subtotal = 0;
-    private String[] products = {"1"};
+    private int[] products = {0,0,0,0,0};
 //    private String
     private String show_id;
     private String show_leftId;
@@ -50,17 +50,15 @@ public class Second extends AppCompatActivity {
 
 
     public void checkOut(View view) {
-//        if(intQty1>0){
-//            products[0]=Integer.toString(intQty1);
-//        }
-//        else
-//            products[0]= NULL;
+            products[0]=intQty1;
+            products[1]=intQty2;
+            products[2]=intQty3;
+            products[3]=intQty4;
+            products[4]=subtotal;
         Intent thirdIntent = new Intent(Second.this, Third.class);
         String subtotal_String = subtotalPrice.getText().toString();
         thirdIntent.putExtra(EXTRA_MESSAGE, subtotal_String);
         thirdIntent.putExtra(EXTRA_PRODUCT, products);
-//        Toast.makeText(this, subtotal_String,
-//                Toast.LENGTH_SHORT).show();
         startActivity(thirdIntent);
     }
     public void validateId(View view){
