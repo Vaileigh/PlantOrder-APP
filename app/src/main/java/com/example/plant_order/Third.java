@@ -18,9 +18,9 @@ public class Third extends AppCompatActivity implements
                 Toast.LENGTH_SHORT).show();
     }
 
-        private Intent secondIntent = getIntent();
-        private String string_subtotal = secondIntent.getStringExtra(Second.EXTRA_MESSAGE);
-        private int int_subtotal = Integer.parseInt(string_subtotal);
+       // private Intent secondIntent = getIntent();
+     //   private String string_subtotal = secondIntent.getStringExtra(Second.EXTRA_MESSAGE);
+      //  private int int_subtotal = Integer.parseInt(string_subtotal);
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {

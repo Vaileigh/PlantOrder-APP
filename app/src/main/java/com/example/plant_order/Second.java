@@ -170,32 +170,28 @@ public class Second extends AppCompatActivity {
 
     }
 
-    public void updateInt(){
-        int resID = getResources().getIdentifier(show_id,"id",getPackageName());
-        int resLeftID = getResources().getIdentifier(show_leftId,"id",getPackageName());
+    public void updateInt() {
+        int resID = getResources().getIdentifier(show_id, "id", getPackageName());
+        int resLeftID = getResources().getIdentifier(show_leftId, "id", getPackageName());
         TextView field_id, field_leftId;
         field_id = (TextView) findViewById(resID);
         field_leftId = (TextView) findViewById(resLeftID);
 
-        if(show_id == "quantity1") {
+        if (show_id == "quantity1") {
             field_id.setText(Integer.toString(intQty1));
-            field_leftId.setText(Integer.toString(leftQty1)+" Left");
-        }
-        else if (show_id == "quantity2") {
+            field_leftId.setText(Integer.toString(leftQty1) + " Left");
+        } else if (show_id == "quantity2") {
             field_id.setText(Integer.toString(intQty2));
-            field_leftId.setText(Integer.toString(leftQty2)+" Left");
-        }
-        else if (show_id == "quantity3") {
+            field_leftId.setText(Integer.toString(leftQty2) + " Left");
+        } else if (show_id == "quantity3") {
             field_id.setText(Integer.toString(intQty3));
-            field_leftId.setText(Integer.toString(leftQty3)+" Left");
-        }
-        else if (show_id == "quantity4") {
+            field_leftId.setText(Integer.toString(leftQty3) + " Left");
+        } else if (show_id == "quantity4") {
             field_id.setText(Integer.toString(intQty4));
-            field_leftId.setText(Integer.toString(leftQty4)+" Left");
-        }
 
-        totalSelected.setText("[ "+Integer.toString(totalQty)+" Item Selected ]");
-        subtotalPrice.setText("$ "+Integer.toString(subtotal)+".00 ");
+            totalSelected.setText("[ " + Integer.toString(totalQty) + " Item Selected ]");
+            subtotalPrice.setText("$ " + Integer.toString(subtotal) + ".00 ");
+        }
     }
     public void snakeplant(View view) {
         displayToast(getString(R.string.snake_plant_message));
