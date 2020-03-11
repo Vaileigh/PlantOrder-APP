@@ -154,7 +154,7 @@
         android:hint="[ Unit number, house number, building, street name ]"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textDetailedAddress" />
 
@@ -281,8 +281,8 @@
 
     <TextView
         android:id="@+id/textDetailedAddress"
-        android:layout_width="250dp"
-        android:layout_height="29dp"
+        android:layout_width="260dp"
+        android:layout_height="17dp"
         android:layout_marginTop="5dp"
         android:text="Detailed Address"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
@@ -368,13 +368,16 @@
 
     <Spinner
         android:id="@+id/label_spinner"
+        style="@android:style/Widget.DeviceDefault.Light.Spinner"
         android:layout_width="186dp"
         android:layout_height="40dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@android:drawable/spinner_background"
+        android:background="@android:drawable/btn_dropdown"
         android:gravity="right"
+        android:popupBackground="@android:drawable/screen_background_dark_transparent"
+        android:spinnerMode="dialog"
         app:layout_constraintEnd_toEndOf="@+id/imageView7"
         app:layout_constraintTop_toTopOf="@+id/imageView7" />
 
@@ -409,20 +412,25 @@
 
         <RadioButton
             android:id="@+id/radioButton"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/cardview_dark_background"
+            android:checked="true"
             android:text="Credit Card" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/cardview_dark_background"
             android:text="Bank Transfer" />
 
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/cardview_dark_background"
             android:text="Cash" />
 
     </RadioGroup>
