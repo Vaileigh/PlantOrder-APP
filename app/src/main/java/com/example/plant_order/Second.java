@@ -14,14 +14,22 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Second extends AppCompatActivity {
+//    private int
     private int totalQty = 0;
     private int intQty1 = 0;
     private int intQty2 = 0;
     private int intQty3 = 0;
     private int intQty4 = 0;
+    private int priceQty1 = 33;
+    private int priceQty2 = 15;
+    private int priceQty3 = 25;
+    private int priceQty4 = 39;
+    private int subtotal;
+//    private String
     private String show_id;
-//    private TextView qty1;
+//    private TextView
     private TextView totalSelected;
+    private TextView subtotalPrice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +37,7 @@ public class Second extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
 //        qty1 = (TextView) findViewById(R.id.quantity1);
         totalSelected = (TextView) findViewById(R.id.textView_itemSelected);
+        subtotalPrice = (TextView) findViewById(R.id.textView_pricesubtotal);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -59,44 +68,55 @@ public class Second extends AppCompatActivity {
             case R.id.plus1:
                 show_id = "quantity1";
                 plusInc();
+                calculateSubtotal();
                 updateInt(show_id);
                 break;
             case R.id.minus1:
                 show_id = "quantity1";
                 minusDec();
+                calculateSubtotal();
                 updateInt(show_id);
                 break;
             case R.id.plus2:
                 show_id = "quantity2";
                 plusInc();
+                calculateSubtotal();
                 updateInt(show_id);
                 break;
             case R.id.minus2:
                 show_id = "quantity2";
                 minusDec();
+                calculateSubtotal();
                 updateInt(show_id);
                 break;
             case R.id.plus3:
                 show_id = "quantity3";
                 plusInc();
+                calculateSubtotal();
                 updateInt(show_id);
                 break;
             case R.id.minus3:
                 show_id = "quantity3";
                 minusDec();
+                calculateSubtotal();
                 updateInt(show_id);
                 break;
             case R.id.plus4:
                 show_id = "quantity4";
                 plusInc();
+                calculateSubtotal();
                 updateInt(show_id);
                 break;
             case R.id.minus4:
                 show_id = "quantity4";
                 minusDec();
+                calculateSubtotal();
                 updateInt(show_id);
                 break;
         }
+    }
+    public void calculateSubtotal(){
+        subtotal = priceQty1*intQty1+priceQty2*intQty2+priceQty3*intQty3+priceQty4*intQty4;
     }
     public void plusInc() {
         if(show_id == "quantity1")
@@ -157,5 +177,6 @@ public class Second extends AppCompatActivity {
             field_id.setText(Integer.toString(intQty4));
 
         totalSelected.setText("[ "+Integer.toString(totalQty)+" Item Selected ]");
+        subtotalPrice.setText("RM "+Integer.toString(subtotal)+".00 ");
     }
 }

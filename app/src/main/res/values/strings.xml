@@ -5,4 +5,5 @@
 
 <!--    Second activity-->
     <string name="item_selected">[ 0 Item Selected ]</string>
+    <string name="price_subtotal">RM 0.00</string>
 </resources>
