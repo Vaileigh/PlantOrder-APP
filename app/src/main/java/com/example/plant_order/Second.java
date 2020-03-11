@@ -16,12 +16,14 @@ import android.widget.Toast;
 public class Second extends AppCompatActivity {
 //    public static
     public static final String EXTRA_MESSAGE = "com.example.plant_order.extra.MESSAGE";
+    public static final String EXTRA_PRODUCT = "com.example.plant_order.extra.MESSAGE";
 //    private int
     private int totalQty = 0;
     private int intQty1 = 0, intQty2 = 0, intQty3 = 0, intQty4=0;
     private int priceQty1 = 33, priceQty2 = 15, priceQty3= 25, priceQty4=39;
     private int leftQty1 = 33, leftQty2 = 15, leftQty3 = 25, leftQty4 = 39;
     private int subtotal = 0;
+    private String[] products = {"1"};
 //    private String
     private String show_id;
     private String show_leftId;
@@ -51,6 +53,9 @@ public class Second extends AppCompatActivity {
         Intent thirdIntent = new Intent(Second.this, Third.class);
         String subtotal_String = subtotalPrice.getText().toString();
         thirdIntent.putExtra(EXTRA_MESSAGE, subtotal_String);
+        thirdIntent.putExtra(EXTRA_PRODUCT, products);
+//        Toast.makeText(this, subtotal_String,
+//                Toast.LENGTH_SHORT).show();
         startActivity(thirdIntent);
     }
     public void validateId(View view){

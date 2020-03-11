@@ -27,7 +27,11 @@ public class Third extends AppCompatActivity implements
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_third);
             Intent secondIntent = getIntent();
-
+            String string_subtotal = secondIntent.getStringExtra(Second.EXTRA_MESSAGE);
+            String[] products = secondIntent.getStringArrayExtra(Second.EXTRA_PRODUCT);
+//            int int_subtotal = Integer.parseInt(string_subtotal);
+            Toast.makeText(this, products[0],
+                Toast.LENGTH_SHORT).show();
             Spinner spinner = findViewById(R.id.label_spinner);
             if (spinner != null) {
                 spinner.setOnItemSelectedListener(this);
@@ -47,7 +51,7 @@ public class Third extends AppCompatActivity implements
         public void onItemSelected(AdapterView<?> adapterView, View view, int
                 i, long l) {
             String spinnerLabel = adapterView.getItemAtPosition(i).toString();
-            displayToast(spinnerLabel);
+//            displayToast(spinnerLabel);
         }
 
         @Override
