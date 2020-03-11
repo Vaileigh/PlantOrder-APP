@@ -193,7 +193,7 @@ public class Second extends AppCompatActivity {
             field_leftId.setText(Integer.toString(leftQty3) + " Left");
         } else if (show_id == "quantity4") {
             field_id.setText(Integer.toString(intQty4));
-
+            field_leftId.setText(Integer.toString(leftQty4) + " Left");
             totalSelected.setText("[ " + Integer.toString(totalQty) + " Item Selected ]");
             subtotalPrice.setText("$ " + Integer.toString(subtotal) + ".00 ");
         }
