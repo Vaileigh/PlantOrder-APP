@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">Plant_Order</string>
+    <string name="app_name">Indoor Plant Order</string>
     <!--    Second activity-->
-    <string name="title_activity_second">Second</string>
+    <string name="title_activity_second">Indoor Plant</string>
+    <string name="title_activity_third">Payment</string>
     <string name="snake_plant_message">This is snake plant.</string>
     <string name="pothos_message">This is pothos plant.</string>
     <string name="dracaena_message">This is dracaena plant.</string>
@@ -16,7 +17,8 @@
 <!--    product1 activity-->
     <string name="productQuantity">Quantity</string>
 
-<!--    Third activity-->
+
+    <!--    Third activity-->
     <string-array name="labels_array">
         <item>DHL</item>
         <item>FedEx</item>
