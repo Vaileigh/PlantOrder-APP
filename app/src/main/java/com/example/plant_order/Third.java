@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -22,6 +24,8 @@ public class Third extends AppCompatActivity implements
     private LayoutInflater layoutInflater;
     private double shipFees;
     private int product;
+    public boolean bool=true;
+    private static int TIME_OUT = 1000;
     public void displayToast(String message) {
         Toast.makeText(getApplicationContext(), message,
                 Toast.LENGTH_SHORT).show();
@@ -137,6 +141,24 @@ public class Third extends AppCompatActivity implements
 
     public void placeOrder(View view) {
         validate();
+        if(!bool) {
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent (Third.this, Second.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }, TIME_OUT);
+            setContentView(R.layout.popwindow);
+            DisplayMetrics dm = new DisplayMetrics();
+            getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+            int width = dm.widthPixels;
+            int height = dm.heightPixels;
+
+            getWindow().setLayout(width,height);
+        }
     }
     public void validate(){
         EditText name,phone,state,area,postalCode,detailedAddr;
@@ -163,35 +185,54 @@ public class Third extends AppCompatActivity implements
 
         if(TextUtils.isEmpty(enter_name)){
             validate_name.setVisibility(View.VISIBLE);
+            bool=true;
         }
-        else
+        else{
             validate_name.setVisibility(View.INVISIBLE);
+            bool=false;
+        }
 
         if(TextUtils.isEmpty(enter_phone)){
             validate_phone.setVisibility(View.VISIBLE);
+            bool=true;
         }
-        else
+        else{
             validate_phone.setVisibility(View.INVISIBLE);
+            bool=false;
+        }
         if(TextUtils.isEmpty(enter_state)){
             validate_state.setVisibility(View.VISIBLE);
+            bool=true;
         }
-        else
+        else{
             validate_state.setVisibility(View.INVISIBLE);
+            bool=false;
+        }
         if(TextUtils.isEmpty(enter_area)){
             validate_area.setVisibility(View.VISIBLE);
+            bool=true;
         }
-        else
+        else{
             validate_area.setVisibility(View.INVISIBLE);
+            bool=false;
+        }
+
         if(TextUtils.isEmpty(enter_postal)){
             validate_postal.setVisibility(View.VISIBLE);
+            bool=true;
         }
-        else
+        else{
             validate_postal.setVisibility(View.INVISIBLE);
+            bool=false;
+        }
         if(TextUtils.isEmpty(enter_addr)){
             validate_addr.setVisibility(View.VISIBLE);
+            bool=true;
         }
-        else
+        else {
             validate_addr.setVisibility(View.INVISIBLE);
+            bool=false;
+        }
     }
 }
 

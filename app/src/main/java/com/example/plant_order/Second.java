@@ -23,7 +23,7 @@ public class Second extends AppCompatActivity {
     private int totalQty = 0;
     private int intQty1 = 0, intQty2 = 0, intQty3 = 0, intQty4=0;
     private int priceQty1 = 33, priceQty2 = 15, priceQty3= 25, priceQty4=39;
-    private int leftQty1 = 33, leftQty2 = 15, leftQty3 = 25, leftQty4 = 39;
+    private int leftQty1 = 50, leftQty2 = 23, leftQty3 = 60, leftQty4 = 44;
     private int subtotal = 0;
     private int[] products = {0,0,0,0,0};
 //    private String
