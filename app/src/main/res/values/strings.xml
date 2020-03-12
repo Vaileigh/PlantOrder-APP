@@ -8,6 +8,15 @@
     <string name="philodendron_green_message">This is philodendron green plant.</string>
     <string name="item_selected">[ 0 Item Selected ]</string>
     <string name="price_subtotal">$ 0.00</string>
+
+    <string name="share_snake">Grab a snake plant now, in just $ 33!</string>
+    <string name="share_pothos">Grab a pothos plant now, in just $ 15!</string>
+    <string name="share_dracaena">Grab a dracaena plant now, in just $ 25!</string>
+    <string name="share_philo">Grab a philodendron green plant now, in just $ 39!</string>
+<!--    product1 activity-->
+    <string name="productQuantity">Quantity</string>
+
+<!--    Third activity-->
     <string-array name="labels_array">
         <item>DHL</item>
         <item>FedEx</item>

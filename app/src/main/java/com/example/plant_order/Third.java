@@ -4,16 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class Third extends AppCompatActivity implements
     AdapterView.OnItemSelectedListener {
-
+    private LinearLayout prod1;
+    private LinearLayout rowLink;
+    private LayoutInflater layoutInflater;
     private double shipFees;
     private int product;
     public void displayToast(String message) {
@@ -31,11 +35,19 @@ public class Third extends AppCompatActivity implements
             Intent secondIntent = getIntent();
             String string_subtotal = secondIntent.getStringExtra(Second.EXTRA_MESSAGE);
             int[] products = secondIntent.getIntArrayExtra(Second.EXTRA_PRODUCT);
+
+            checkProduct(products);
+
+            //Product subtotal
             product = products[4];
             productSubtotal(product);
+
+
 //            String int_subtotal = Integer.toString(products[4]);
 //            Toast.makeText(this, int_subtotal,
 //                Toast.LENGTH_SHORT).show();
+
+
             Spinner spinner = findViewById(R.id.label_spinner);
             if (spinner != null) {
                 spinner.setOnItemSelectedListener(this);
@@ -51,6 +63,45 @@ public class Third extends AppCompatActivity implements
             }
         }
 
+
+    private void checkProduct(int[] product){
+//        for(int i=0; i<4;i++){
+            if(product[0]>0){
+                rowLink = (LinearLayout)getLayoutInflater().inflate(R.layout.product1, null);
+                TextView firstProductQty = (TextView)rowLink.findViewById(R.id.textQuantityProd1);
+                firstProductQty.setText ("100");
+                prod1 = findViewById(R.id.thirdPage);
+                layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
+                View myview = layoutInflater.inflate(R.layout.product1, null, false);
+                prod1.addView(myview);
+                }
+            if(product[1]>0){
+                rowLink = (LinearLayout)getLayoutInflater().inflate(R.layout.product1, null);
+                TextView firstProductQty = (TextView)rowLink.findViewById(R.id.textQuantityProd1);
+                firstProductQty.setText ("100");
+                prod1 = findViewById(R.id.thirdPage);
+                layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
+                View myview = layoutInflater.inflate(R.layout.product2, null, false);
+                prod1.addView(myview);
+            }if(product[2]>0){
+                rowLink = (LinearLayout)getLayoutInflater().inflate(R.layout.product1, null);
+                TextView firstProductQty = (TextView)rowLink.findViewById(R.id.textQuantityProd1);
+                firstProductQty.setText ("100");
+                prod1 = findViewById(R.id.thirdPage);
+                layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
+                View myview = layoutInflater.inflate(R.layout.product3, null, false);
+                prod1.addView(myview);
+            }if(product[3]>0){
+                rowLink = (LinearLayout)getLayoutInflater().inflate(R.layout.product1, null);
+                TextView firstProductQty = (TextView)rowLink.findViewById(R.id.textQuantityProd1);
+                firstProductQty.setText ("100");
+                prod1 = findViewById(R.id.thirdPage);
+                layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
+                View myview = layoutInflater.inflate(R.layout.product4, null, false);
+                prod1.addView(myview);
+            }
+//        }
+    }
     private void productSubtotal(int price) {
         TextView subtotal;
         subtotal = (TextView) findViewById(R.id.textView_priceProd);
@@ -72,7 +123,7 @@ public class Third extends AppCompatActivity implements
     }
 
     private void totalPayment(){
-        double prodSubtotal = product;
+//        double prodSubtotal = product;
         double sum = product + shipFees;
         TextView paymentView;
         paymentView = (TextView) findViewById(R.id.total);

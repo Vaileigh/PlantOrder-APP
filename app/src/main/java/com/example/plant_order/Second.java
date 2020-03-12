@@ -8,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ShareCompat;
 
 import android.view.View;
 import android.widget.TextView;
@@ -18,6 +19,7 @@ public class Second extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.plant_order.extra.MESSAGE";
     public static final String EXTRA_PRODUCT = "com.example.plant_order.extra.MESSAGE";
 //    private int
+    private String product;
     private int totalQty = 0;
     private int intQty1 = 0, intQty2 = 0, intQty3 = 0, intQty4=0;
     private int priceQty1 = 33, priceQty2 = 15, priceQty3= 25, priceQty4=39;
@@ -218,5 +220,29 @@ public class Second extends AppCompatActivity {
 
     public void philodendrongreen(View view) {
         displayToast(getString(R.string.philodendron_green_message));
+    }
+
+    public void share(View view) {
+        String mimeType = "text/plain";
+        switch (view.getId()){
+            case R.id.imageButton1:
+                product = getResources().getString(R.string.share_snake);
+                break;
+            case R.id.imageButton2:
+                product = getResources().getString(R.string.share_pothos);
+                break;
+            case R.id.imageButton3:
+                product = getResources().getString(R.string.share_dracaena);
+                break;
+            case R.id.imageButton4:
+                product = getResources().getString(R.string.share_philo);
+                break;
+        }
+        ShareCompat.IntentBuilder
+                .from(this)
+                .setType(mimeType)
+                .setChooserTitle("Share this product details with:")
+                .setText(product)
+                .startChooser();
     }
 }
