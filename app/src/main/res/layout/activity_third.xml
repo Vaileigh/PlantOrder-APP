@@ -19,16 +19,14 @@
 
     <TextView
         android:id="@+id/textView_prodSubtotal"
-        android:layout_width="98dp"
-        android:layout_height="15dp"
+        android:layout_width="135dp"
+        android:layout_height="18dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginBottom="32dp"
         android:text="Product Subtotal "
         android:textSize="12sp"
@@ -37,25 +35,25 @@
 
     <TextView
         android:id="@+id/textView_total"
-        android:layout_width="83dp"
-        android:layout_height="16dp"
+        android:layout_width="121dp"
+        android:layout_height="14dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
         android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:gravity="right"
         android:text="Total Payment "
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button_PlaceOrder"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView_priceProd"
+        app:layout_constraintEnd_toStartOf="@+id/button_PlaceOrder"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/bottom2"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -69,39 +67,43 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="9dp"
         android:layout_marginBottom="5dp"
         android:text="Shipping Subtotal "
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_prodSubtotal" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_prodSubtotal"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView_priceProd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
         android:layout_marginBottom="9dp"
         android:text="$ 0.00"
         app:layout_constraintBottom_toTopOf="@+id/textView_priceProd2"
+        app:layout_constraintEnd_toStartOf="@+id/textView_total"
+        app:layout_constraintHorizontal_bias="0.389"
         app:layout_constraintStart_toEndOf="@+id/textView_prodSubtotal"
         app:layout_constraintTop_toBottomOf="@+id/bottom2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.96" />
 
     <TextView
         android:id="@+id/textView_priceProd2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="4dp"
         android:text="$ 0.00"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView_priceProd"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textView_shipSubtotal" />
 
     <androidx.appcompat.widget.Toolbar
@@ -146,6 +148,7 @@
         android:layout_height="20dp"
         android:layout_marginTop="13dp"
         android:text="Name"
+        android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@+id/enterName"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -173,6 +176,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="20dp"
         android:text="Phone"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textName" />
 
@@ -197,6 +201,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="20dp"
         android:text="State"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textPhone" />
 
@@ -221,6 +226,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
         android:text="Area"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textState" />
 
@@ -239,13 +245,14 @@
 
     <TextView
         android:id="@+id/textPostalCode"
-        android:layout_width="80dp"
+        android:layout_width="85dp"
         android:layout_height="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="20dp"
         android:text="Postal Code"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textArea" />
 
     <EditText
@@ -396,13 +403,13 @@
         android:gravity="right"
         android:text="$ 0.00"
         android:textColor="#FFFFFF"
-        android:textSize="22sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_PlaceOrder"
-        app:layout_constraintHorizontal_bias="0.564"
+        app:layout_constraintHorizontal_bias="0.782"
         app:layout_constraintStart_toStartOf="@+id/textView_total"
         app:layout_constraintTop_toTopOf="@+id/textView_total"
-        app:layout_constraintVertical_bias="0.705" />
+        app:layout_constraintVertical_bias="0.777" />
 
     <Button
         android:id="@+id/button_PlaceOrder"
@@ -419,6 +426,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="2dp"
         android:layout_marginBottom="9dp"
         android:text="*PLEASE ENTER NAME"
         android:textColor="#FF0000"
@@ -426,7 +434,7 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/textPhone"
         app:layout_constraintEnd_toStartOf="@+id/enterName"
-        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textName"
         app:layout_constraintVertical_bias="0.0" />
@@ -437,6 +445,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="2dp"
         android:layout_marginBottom="10dp"
         android:text="*PLEASE ENTER PHONE"
         android:textColor="#FF0000"
@@ -444,7 +453,7 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/textState"
         app:layout_constraintEnd_toStartOf="@+id/enterPhone"
-        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textPhone"
         app:layout_constraintVertical_bias="0.0" />
@@ -455,6 +464,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="2dp"
         android:layout_marginBottom="5dp"
         android:text="*PLEASE ENTER STATE"
         android:textColor="#FF0000"
@@ -462,9 +472,10 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/textArea"
         app:layout_constraintEnd_toStartOf="@+id/enterState"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textState" />
+        app:layout_constraintTop_toBottomOf="@+id/textState"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView_ValidateName4"
@@ -472,7 +483,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="2dp"
         android:layout_marginBottom="9dp"
         android:text="*PLEASE ENTER AREA"
         android:textColor="#FF0000"
@@ -480,9 +491,9 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/textPostalCode"
         app:layout_constraintEnd_toStartOf="@+id/enterArea"
-        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textArea" />
+        app:layout_constraintTop_toBottomOf="@+id/textArea" />
 
     <TextView
         android:id="@+id/textView_ValidateName5"
@@ -490,6 +501,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
         android:layout_marginBottom="3dp"
         android:text="*PLEASE ENTER POSTAL CODE"
         android:textColor="#FF0000"
@@ -497,7 +509,7 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/textDetailedAddress"
         app:layout_constraintEnd_toStartOf="@+id/enterPostalCode"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textPostalCode"
         app:layout_constraintVertical_bias="1.0" />
@@ -506,16 +518,15 @@
         android:id="@+id/textView_ValidateName6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginLeft="164dp"
+        android:layout_marginStart="123dp"
+        android:layout_marginLeft="123dp"
         android:text="*PLEASE ENTER DETAILED ADDRESS"
         android:textColor="#FF0000"
         android:textSize="8sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/textDetailedAddress"
         app:layout_constraintEnd_toEndOf="@+id/textDetailedAddress"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textDetailedAddress"
         app:layout_constraintTop_toTopOf="@+id/textDetailedAddress"
         app:layout_constraintVertical_bias="1.0" />
 
