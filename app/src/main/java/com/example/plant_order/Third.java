@@ -69,34 +69,22 @@ public class Third extends AppCompatActivity implements
     private void checkProduct(int[] product){
 //        for(int i=0; i<4;i++){
             if(product[0]>0){
-                rowLink = (LinearLayout)getLayoutInflater().inflate(R.layout.product1, null);
-                TextView firstProductQty = (TextView)rowLink.findViewById(R.id.textQuantityProd1);
-                firstProductQty.setText ("100");
                 prod1 = findViewById(R.id.thirdPage);
                 layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
                 View myview = layoutInflater.inflate(R.layout.product1, null, false);
                 prod1.addView(myview);
                 }
             if(product[1]>0){
-                rowLink = (LinearLayout)getLayoutInflater().inflate(R.layout.product1, null);
-                TextView firstProductQty = (TextView)rowLink.findViewById(R.id.textQuantityProd1);
-                firstProductQty.setText ("100");
                 prod1 = findViewById(R.id.thirdPage);
                 layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
                 View myview = layoutInflater.inflate(R.layout.product2, null, false);
                 prod1.addView(myview);
             }if(product[2]>0){
-                rowLink = (LinearLayout)getLayoutInflater().inflate(R.layout.product1, null);
-                TextView firstProductQty = (TextView)rowLink.findViewById(R.id.textQuantityProd1);
-                firstProductQty.setText ("100");
                 prod1 = findViewById(R.id.thirdPage);
                 layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
                 View myview = layoutInflater.inflate(R.layout.product3, null, false);
                 prod1.addView(myview);
             }if(product[3]>0){
-                rowLink = (LinearLayout)getLayoutInflater().inflate(R.layout.product1, null);
-                TextView firstProductQty = (TextView)rowLink.findViewById(R.id.textQuantityProd1);
-                firstProductQty.setText ("100");
                 prod1 = findViewById(R.id.thirdPage);
                 layoutInflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
                 View myview = layoutInflater.inflate(R.layout.product4, null, false);
