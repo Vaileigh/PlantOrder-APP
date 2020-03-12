@@ -57,11 +57,17 @@ public class Second extends AppCompatActivity {
             products[2]=intQty3;
             products[3]=intQty4;
             products[4]=subtotal;
-        Intent thirdIntent = new Intent(Second.this, Third.class);
-        String subtotal_String = subtotalPrice.getText().toString();
-        thirdIntent.putExtra(EXTRA_MESSAGE, subtotal_String);
-        thirdIntent.putExtra(EXTRA_PRODUCT, products);
-        startActivity(thirdIntent);
+        if (intQty1>0 || intQty2>0||intQty3>0||intQty4>0){
+            Intent thirdIntent = new Intent(Second.this, Third.class);
+            String subtotal_String = subtotalPrice.getText().toString();
+            thirdIntent.putExtra(EXTRA_MESSAGE, subtotal_String);
+            thirdIntent.putExtra(EXTRA_PRODUCT, products);
+            startActivity(thirdIntent);
+        }
+        else{
+            Toast.makeText(getApplicationContext(), "Please select an item",
+                    Toast.LENGTH_SHORT).show();
+        }
     }
     public void validateId(View view){
         switch(view.getId()) {

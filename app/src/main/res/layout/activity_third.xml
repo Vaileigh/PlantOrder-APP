@@ -408,7 +408,7 @@
         android:id="@+id/button_CheckOut"
         android:layout_width="110dp"
         android:layout_height="55dp"
-        android:text="CHECK OUT"
+        android:text="PLACE ORDER"
         app:layout_constraintEnd_toEndOf="@+id/bottom2"
         app:layout_constraintTop_toTopOf="@+id/bottom2" />
 
