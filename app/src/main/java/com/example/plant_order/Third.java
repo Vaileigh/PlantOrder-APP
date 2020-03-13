@@ -27,7 +27,7 @@ public class Third extends AppCompatActivity implements
     private double shipFees;
     private int product;
     public boolean bool=true;
-    private static int TIME_OUT = 1000;
+    private static int TIME_OUT = 1200;
     public void displayToast(String message) {
         Toast.makeText(getApplicationContext(), message,
                 Toast.LENGTH_SHORT).show();
