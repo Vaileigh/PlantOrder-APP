@@ -17,6 +17,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class Third extends AppCompatActivity implements
     AdapterView.OnItemSelectedListener {
     private LinearLayout prod1;
@@ -119,9 +121,10 @@ public class Third extends AppCompatActivity implements
     private void totalPayment(){
 //        double prodSubtotal = product;
         double sum = product + shipFees;
+        DecimalFormat a = new DecimalFormat("#.#");
         TextView paymentView;
         paymentView = (TextView) findViewById(R.id.total);
-        paymentView.setText ("$ "+Double.toString(sum));
+        paymentView.setText ("$ "+a.format(sum));
     }
 
     @Override
