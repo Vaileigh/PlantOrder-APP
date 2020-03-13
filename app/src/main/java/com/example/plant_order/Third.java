@@ -106,7 +106,7 @@ public class Third extends AppCompatActivity implements
     private void shippingSubtotal(String shipMethod){
         String snippingChoices[]= getResources().getStringArray(R.array.labels_array);
         if(shipMethod.equals(snippingChoices[0]))
-            shipFees =3.65;
+            shipFees =3.69;
         else if(shipMethod.equals(snippingChoices[1]))
             shipFees =5.53;
         else if (shipMethod.equals(snippingChoices[2]))
