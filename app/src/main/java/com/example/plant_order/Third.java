@@ -51,11 +51,6 @@ public class Third extends AppCompatActivity implements
             productSubtotal(product);
 
 
-//            String int_subtotal = Integer.toString(products[4]);
-//            Toast.makeText(this, int_subtotal,
-//                Toast.LENGTH_SHORT).show();
-
-
             Spinner spinner = findViewById(R.id.label_spinner);
             if (spinner != null) {
                 spinner.setOnItemSelectedListener(this);
@@ -113,13 +108,10 @@ public class Third extends AppCompatActivity implements
             shipFees =2.46;
         TextView shipTotal;
         shipTotal = (TextView) findViewById(R.id.textView_priceProd2);
-//        Toast.makeText(this, Double.toString(shipFees),
-//                Toast.LENGTH_SHORT).show();
         shipTotal.setText("$ "+Double.toString(shipFees));
     }
 
     private void totalPayment(){
-//        double prodSubtotal = product;
         double sum = product + shipFees;
         DecimalFormat a = new DecimalFormat("#.#");
         TextView paymentView;
